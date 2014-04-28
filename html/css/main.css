@@ -1,0 +1,449 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin,cyrillic-ext);
+
+html, body, a, input, textarea, select{
+	font-family: 'PT Sans', 'sans-serif';
+}
+html, body{
+	height: 100%;
+}
+img{
+	display: inline-block;
+	*display: inline;
+	vertical-align: top;
+	zoom: 1;
+}
+A:hover{
+	text-decoration: none;
+}
+
+form{
+	margin: 0;
+	padding: 0;
+}
+
+.i-clear{
+	display: block;
+	clear: both;
+	height: 0;
+	font-size: 0;
+	line-height: 1px;
+	overflow: hidden;
+}
+
+.i-clearfix:before, .i-clearfix:after{
+	content: ".";
+	display: block;
+	height: 0;
+	visibility: hidden;
+	font-size: 0;
+}
+.i-clearfix:after{
+	clear: both;
+}
+*+html .i-clearfix{
+	zoom: 1;
+}
+
+input[type="image"], input[type="button"], label{ cursor: pointer; }
+table{ width: 100%; border-collapse: collapse; border-spacing: 0; border: 0; }
+
+.checkbox{
+	position: relative;
+	top: 2px;
+}
+* html .checkbox{
+	top: 1px;
+}
+*+html .checkbox{
+	top: 1px;
+}
+
+@media not all and (-webkit-min-device-pixel-ratio){
+	.checkbox{
+		top: 0;
+	}
+}
+
+/*
+	Памятка по использованию селекторов browserCSSdetector.js:
+		Селекторы ОСи:
+			.win - Windows
+			.linux - Linux
+			.mac - MacOS
+
+		Селекторы браузеров:
+			.ie - все версии ИЕ
+			.ie8 - ИЕ 8.х
+			.ie7 - ИЕ 7.x
+			.ie6 - ИЕ 6.x
+			.ie5 - ИЕ 5.x
+			.gecko - все версии фаерфокса, и остальные гекко-браузеры
+			.ff2 - фаерфокс 2
+			.ff3 - фаерфокс 3
+			.opera - все версии оперы
+			.opera8 - опера 8.x
+			.opera9 - опера 9.x
+			.konqueror - konqueror
+			.safari - сафари
+
+		Приоритеты на примере ФФ3:
+		1	.win.ff3 #id{background: #aaa}
+		2	.win.gecko #id{background: #f00}
+		3	.ff3 #id{background:#333}
+		4	.gecko #id{background:#00f}
+		5	.win #id{background: #ff0}
+ */
+
+/*---*/
+
+.pa{position: absolute !important;}
+.pr{position: relative !important;}
+.ps{position: static !important;}
+
+.oh{overflow: hidden !important;}
+.ov{overflow: visible !important;}
+
+.dn{display: none !important;}
+.db{display: block !important;}
+.dib{display: inline-block; *display: inline;vertical-align: top;zoom: 1;}
+
+.fn{float: none !important;}
+.fr{float: right !important;}
+.fl{float: left !important;}
+
+.wa{width: auto !important;}
+
+.m0{margin: 0 !important;}
+.mt0{margin-top: 0 !important;}
+.mr0{margin-right: 0 !important;}
+.mb0{margin-bottom: 0 !important;}
+.ml0{margin-left: 0 !important;}
+
+.p0{padding: 0 !important;}
+.pt0{padding-top: 0 !important;}
+.pr0{padding-right: 0 !important;}
+.pb0{padding-bottom: 0 !important;}
+.pl0{padding-left: 0 !important;}
+
+.fs12{font-size: 12px !important;}
+.fs13{font-size: 13px !important;}
+.fs14{font-size: 14px !important;}
+.fs16{font-size: 16px !important;}
+.fs18{font-size: 18px !important;}
+.fs20{font-size: 20px !important;}
+.fs24{font-size: 24px !important;}
+
+.tar{text-align: right !important;}
+.tac{text-align: center !important;}
+
+.tdn{text-decoration: none !important;}
+.tdn:hover{text-decoration: underline !important;}
+
+.ttu{text-transform: uppercase !important;}
+
+.vat{vertical-align: top !important;}
+
+.wsn{white-space: nowrap !important;}
+
+.cp{cursor: pointer;}
+
+.b0{border: 0 !important;}
+.bt0{border-top: 0 !important;}
+.br0{border-right: 0 !important;}
+.bb0{border-bottom: 0 !important;}
+.bl0{border-left: 0 !important;}
+
+.bbd{text-decoration: none !important; border-bottom: 1px dashed;}
+.bbd:hover{text-decoration: none !important; border-bottom: 0;}
+
+.bbdo{text-decoration: none !important; border-bottom: 1px dotted;}
+.bbdo:hover{text-decoration: none !important; border-bottom: 0;}
+
+.bgn{background: none !important;}
+
+.cb{clear: both !important;}
+
+
+/*---*/
+
+/*
+behavior: url(PIE.htc);
+*/
+
+
+.pagewrap{
+	position: relative;
+	min-height: 100%;
+	background: #f6f6f6;
+}
+
+/*--- header ---*/
+.header{
+	position: relative;
+	height: 177px;
+	background: url(../images/header.png) center top no-repeat;
+}
+.header__inn{
+	width: 1000px;
+	margin: 0 auto;
+}
+
+
+.logo{
+	display: block;
+	float: left;
+}
+
+.header__search{
+	float: right;
+	margin: 40px 70px 0 0;
+	font-size: 18px;
+	font-weight: bold;
+	color: #FFF;
+}
+.header__search__frm{
+	display: block;
+	width: 259px;
+	height: 29px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	background-color: #fff;
+	border: 1px solid #d8d8d8;
+}
+.header__search__frm input{
+	float: left;
+	width: 211px;
+	height: 29px;
+	padding: 0 0 0 10px;
+	background: none;
+	border: 0;
+	outline: none;
+}
+.header__search__frm a{
+	display: block;
+	float: left;
+	width: 38px;
+	height: 29px;
+	background: url(../images/header__search.png) 11px 6px no-repeat;
+}
+
+
+/*--- footer ---*/
+.footer{
+	clear: both;
+}
+.footer__inn{
+	width: 1000px;
+	margin: 0 auto;
+	padding: 0 0 130px 0;
+}
+
+.footer__bl{
+	float: left;
+	width: 150px;
+	margin: 0 15px 0 0;
+}
+.footer__bl h3{
+	margin: 0 0 24px 0;
+	font-size: 17px;
+	color: #4a4a4a;
+}
+.footer__bl ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.footer__bl ul a{
+	font-size: 12px;
+	line-height: 18px;
+	text-decoration: none;
+	color: #4a4a4a;
+}
+.footer__bl ul a:hover{
+	text-decoration: underline;
+}
+
+/*--- footer end---*/
+
+/************************************************************************************
+CONTENT
+*************************************************************************************/
+.center{
+	width: 1000px;
+	margin: 0 auto;
+}
+
+
+
+.content{
+	padding: 0 0 70px 0;
+}
+
+.info{
+}
+.info__l{
+	float: left;
+	width: 334px;
+	margin: 0 86px 0 0;
+	padding: 60px 0 0 0;
+}
+.info__l .img{
+	display: table-cell;
+	width: 94px;
+	height: 94px;
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid transparent;
+}
+.info__l .img.cur{
+	border: 1px solid #78b00f;
+	background-color: #fff;
+}
+.info__l .counter{
+	margin: 17px 0 40px;
+	font-size: 14px;
+	text-align: center;
+	color: #868686;
+}
+
+.info__r{
+	overflow: hidden;
+	zoom: 1;
+}
+.info__r h1{
+	margin: 0 0 30px 0;
+	font-size: 36px;
+	font-weight: normal;
+	color: #454545;
+}
+.info__r .price{
+	display: block;
+	margin: 0 0 20px 0;
+	font-size: 20px;
+	color: #fb0000;
+}
+.info__r p{
+	margin: 0 0 17px 0;
+	padding: 0;
+	font-size: 14px;
+	line-height: 24px;
+	color: #868686;
+}
+.info__r .btn{
+	display: inline-block;
+	*display: inline;
+	vertical-align: top;
+	zoom: 1;
+	margin: 0 0 35px 0;
+	padding: 0 13px;
+	height: 33px;
+	font-size: 14px;
+	line-height: 33px;
+	text-decoration: none;
+	color: #868686;
+	-moz-border-radius: 18px;
+	-webkit-border-radius: 18px;
+	border-radius: 18px;
+	background-color: #fff;
+	border: 1px solid #d8d8d8;
+}
+.info__r .buy{
+	position: relative;
+	display: block;
+	float: left;
+	margin: 0 38px 0 0;
+	padding: 0 21px 0 84px;
+	height: 45px;
+	font-size: 17px;
+	font-weight: bold;
+	line-height: 45px;
+	text-decoration: none;
+	color: #FFF;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	background-color: #6f991f;
+	-moz-box-shadow: 0 3px 0 #54770f;
+	-webkit-box-shadow: 0 3px 0 #54770f;
+	box-shadow: 0 3px 0 #54770f;
+}
+.info__r .buy:before{
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 60px;
+	height: 45px;
+	background: #79a325 url(../images/info__r__buy.png) 18px 10px no-repeat;
+}
+
+
+
+.tabs{
+	width: 100%;
+	overflow: hidden;
+	margin: 0;
+	zoom: 1;
+	padding: 0;
+	position: relative;
+}
+
+.tabs dt{
+	float: left;
+	height: 46px;
+	background: #FFF;
+	border: 1px solid #d8d8d8;
+	border-bottom: 0;
+	padding: 0 27px;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 45px;
+	color: #454545;
+	position: relative;
+	margin-right: 7px;
+	cursor: pointer;
+	position: relative;
+}
+
+.tabs dt:hover{
+
+}
+
+.tabs dt.selected{
+	border-top-color: #70991f;
+	z-index: 3;
+	cursor: auto;
+}
+.tabs dt.selected:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -1px;
+	right: -1px;
+	height: 4px;
+	background: #70991f;
+}
+
+.tabs dd{
+	background: #fff;
+	display: none;
+	float: right;
+	width: 100%;
+	margin: 46px 0 0 -100%;
+	position: relative;
+	z-index: 2;
+}
+
+.tabs dd.selected{
+	display: block;
+}
+
+.tabs .tab-content{
+	border: 1px solid #d8d8d8;
+	padding: 60px 22px 22px 22px;
+	font-size: 13px;
+	line-height: 24px;
+	color: #868686;
+}
+
